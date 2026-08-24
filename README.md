@@ -49,7 +49,17 @@ english-word-extractor/
 
 ## 安装
 
-### 方式一：手动安装（WorkBuddy）
+### 方式一：让 Agent 直接安装（推荐）
+
+将本仓库的 GitHub 链接发给你的 AI 助手（如 WorkBuddy），让它安装即可，例如：
+
+```
+帮我安装这个 Skill：https://github.com/Cheering571/english-word-extractor
+```
+
+Agent 会自动将仓库中的 Skill 文件安装到本机的 Skill 目录并生效。
+
+### 方式二：手动安装（WorkBuddy）
 
 1. 克隆或下载本仓库：
 
@@ -66,7 +76,7 @@ english-word-extractor/
 
 3. 重启会话或开启新会话即可生效。
 
-### 方式二：仅使用脚本
+### 方式三：仅使用脚本
 
 `scripts/build_word_table.py` 可脱离 Skill 独立使用：
 
