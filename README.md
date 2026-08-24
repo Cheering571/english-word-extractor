@@ -54,7 +54,7 @@ english-word-extractor/
 1. 克隆或下载本仓库：
 
    ```bash
-   git clone https://github.com/<你的用户名>/english-word-extractor.git
+   git clone https://github.com/Cheering571/english-word-extractor.git
    ```
 
 2. 将整个 `english-word-extractor` 文件夹复制到用户级 Skill 目录：
