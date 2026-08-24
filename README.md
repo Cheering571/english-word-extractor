@@ -20,10 +20,28 @@
 |      | v. 预订；预约 |
 | apple | n. 苹果 |
 
+## 效果示例
+
+### 输入图片
+
+一张包含英文单词及其相关内容的截图（例如背单词 App 页面）：
+
+![输入示例 A](assets/examples/A.jpg)
+
+### 输出表格
+
+Skill 识别图中单词并生成两列表格 Excel 文件，单词列纵向合并，多词性释义依次堆叠：
+
+![输出示例 B](assets/examples/B.png)
+
 ## 目录结构
 
 ```
 english-word-extractor/
+├── assets/
+│   └── examples/
+│       ├── A.jpg             # 示例输入图片
+│       └── B.png             # 示例输出表格
 ├── SKILL.md                  # Skill 定义（触发条件 + 执行流程）
 └── scripts/
     └── build_word_table.py   # JSON → xlsx 表格生成脚本（依赖 openpyxl）
