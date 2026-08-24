@@ -26,7 +26,7 @@
 
 一张包含英文单词及其相关内容的截图（例如背单词 App 页面）：
 
-![输入示例 A](assets/examples/A.jpg)
+<img src="assets/examples/A.jpg" width="360" alt="输入示例 A">
 
 ### 输出表格
 
