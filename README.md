@@ -13,6 +13,18 @@
 - **去重与排序**：忽略大小写去重，按单词在图片中出现的顺序（从上到下、从左到右）排列
 - **降级方案**：脚本执行失败时自动降级为 Markdown 表格输出
 
+## 与 word-table-organizer 的分工
+
+本 Skill 只负责**图片输入**。如果你手上是**文本清单**（直接粘贴一串单词，没有图片），请用配套的 [`word-table-organizer`](https://github.com/Cheering571/word-table-organizer)：
+
+| 输入 | 该用哪个 Skill |
+|---|---|
+| 图片 / 截图 | **english-word-extractor**（本仓库） |
+| 文本粘贴的单词清单 | [word-table-organizer](https://github.com/Cheering571/word-table-organizer) |
+| 图片 + 文本清单 | 图片走本 Skill，文本部分交给 word-table-organizer，合并进同一张表 |
+
+两个 Skill 共用同一份 `build_word_table.py`，产出的表格版式完全一致，可以在同一张表上交替追加。
+
 ## 输出示例
 
 | 单词 | 音标 | 词性与释义 |

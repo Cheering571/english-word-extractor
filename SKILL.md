@@ -1,6 +1,6 @@
 ---
 name: english-word-extractor
-description: 从用户上传的图片中识别英文单词，提取音标，标注词性（POS）及对应中文释义，并生成一个三列表格的 Excel（.xlsx）文件（单词、音标、词性与释义，前两列随词性行纵向合并）。当用户上传包含英文单词的图片（如教材截图、单词表、练习题、屏幕截图），并要求"识别单词"、"提取单词"、"整理单词表"、"加音标"、"查词性释义"、"做单词表格"等时，应使用此技能。英文触发词如 extract words from image、identify English words in the picture 也适用。
+description: 从用户上传的图片/截图中识别英文单词，提取音标，标注词性（POS）及对应中文释义，并生成三列 Excel（.xlsx）单词表。仅当输入媒介是图片（教材截图、单词表拍照、练习题、屏幕截图）时使用；用户直接在消息里文本粘贴单词清单、没有图片时不要用本技能，改用 word-table-organizer。英文触发词如 extract words from image、identify English words in the picture 也适用。
 ---
 
 # English Word Extractor（图片英文单词提取 → Excel 表格）
@@ -22,6 +22,12 @@ description: 从用户上传的图片中识别英文单词，提取音标，标�
 2. 图片内容明显是单词表、词汇书截图、英语练习题等以英文单词为主的材料，且用户希望得到词汇整理结果。
 
 不触发：用户仅要求翻译图片中的句子/段落、描述图片内容、或处理与英文单词无关的图片。
+
+> **与 `word-table-organizer` 的分工（按输入媒介判定，不按措辞）**
+> - 输入是**图片** → 本技能。
+> - 输入是**文本粘贴**的单词清单（无图片）→ `word-table-organizer`。
+> - 图片 + 文本清单同时出现 → 先按本技能识别图片，文本清单部分交给 `word-table-organizer` 合并进同一张表。
+> - 两个技能共用同一套表格版式（`build_word_table.py`），产出格式一致，不会因为走哪个技能而变形。
 
 ## 执行流程
 
